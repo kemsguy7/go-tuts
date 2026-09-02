@@ -1,0 +1,10 @@
+# Compiled binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# If you build your binary without an extension (like on Linux/macOS)
+# It is common to ignore the specific name of your output file
+/your-app-name
