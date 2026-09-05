@@ -75,7 +75,9 @@ floats: float64 is a more precise float and is the recommended type for calculat
  b is the imaginary part (multiplied by i , where i ^2 =1)
  Direct Assignment: Complex numbers can also be directly assigned as a + bi, where a and b are floating-point literals
 
+used to create a complex number complex(real, image)
+
 */
 
 var z1 complex64 = complex(5, 7) 
- //Create a complex number with real part3 and imaginary part4 
+//Create a complex number with real part3 and imaginary part4 
