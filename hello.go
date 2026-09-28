@@ -41,6 +41,22 @@ func main() {
 	sum := z1 + z2 //Result: 3 + 7i 
 	fmt.Println("The sum is : ", sum )
 
+	/* switch statement 
+	- Go has the fallthrough statement 
+	-  A type switch is a form of switch that tests the type on an "interface" variable
+	*/
+
+	//type checking an interface with swich statement
+	var c interface{} = "Hello"
+	switch v := c.(type) {
+	case int: 
+		fmt.Println("Integer:", v)
+	case string: 
+		fmt.Println("String:", v)
+	default: 
+		fmt.Println("Unknown type")
+	}
+
 }
 
 // Variable Types and declaration Styles
@@ -81,3 +97,5 @@ used to create a complex number complex(real, image)
 
 var z1 complex64 = complex(5, 7) 
 //Create a complex number with real part3 and imaginary part4 
+
+
