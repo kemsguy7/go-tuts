@@ -46,7 +46,7 @@ func main() {
 	-  A type switch is a form of switch that tests the type on an "interface" variable
 	*/
 
-	//type checking an interface with swich statement
+	//type checking an interface with switch statement
 	var c interface{} = "Hello"
 	switch v := c.(type) {
 	case int: 
