@@ -56,12 +56,13 @@ purpose does each serve?
 - Post: 
 
 2. How does Go’s for loop behave when it is used without any
-conditions?
+conditions? : It becomes and infinite Loop
 3. Explain how the range keyword is used to iterate over arrays and maps
 in Go.
 4. What is the effect of using the break statement within a for loop?
 Provide an example.
 5. Describe a scenario where using continue in a loop would be useful.
+ -  
 6. How can the for loop in Go mimic a while loop?
 7. Why is the range keyword advantageous when working with
 collections in Go?
