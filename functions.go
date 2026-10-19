@@ -16,6 +16,37 @@ func functionName(parameterList)(returnType) {
 - if all parameters have the same time, you can omit the type for all but the alst parameter
 
 */
+
+//variadic function take an arbitrary no of arguments
+func sumFunc(numbers ...int) int {
+	total := 0 
+	for _, number := range numbers {
+		total += number 
+	}
+	return total 
+}
+
+func printNames(names ...string)  {
+	for i, name := range names {
+		fmt.Printf("Name %d: %s\n", i + 1, name) 
+	}
+}
+
+//variadic functions with multiple return values
+func average(numbers ...float64)(float64, error) {
+	if len(numbers) == 0 {
+		return 0, fmt.Errorf("no numbers provided")
+	}
+	total := 0.0 
+	for _, number := range numbers {
+		total += number
+	}
+	return total / float64(len(numbers)), nil 
+
+}
+
+
+
 func main() { 
 
 	sayHello := func() {
@@ -68,16 +99,22 @@ func main() {
 	double := multiplier(2)
 	fmt.Println((double(5)))
 
-	//variadic function take an arbitraty no of arguments 
-	
-	fmt.Println(sum(50, 9, 8 , 9))
 
-}
+	//printing sunFunc
+	fmt.Println(sumFunc(50, 9, 8 , 9))
 
-func sum(numbers ... int) int {
-	total := 0 
-	for _, number := range numbers {
-		total += number 
+	// printing printNames
+	printNames("Matthew", "Udo", "Zoe")
+
+
+
+	Avgresult, Avgerr := average(2.0, 4.0, 6.0)
+	if err != nil {
+		fmt.Println("Error: ", Avgerr)
+	} else {
+		fmt.Println("Average", Avgresult) 
 	}
-	return total 
+
 }
+
+
