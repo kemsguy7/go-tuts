@@ -45,6 +45,27 @@ func average(numbers ...float64)(float64, error) {
 
 }
 
+func max (numbers ...int) int {
+	if len(numbers) == 0 {
+		return 0 // or handle as needed 
+	}
+	maxVal := numbers[0]
+	for _, num := range numbers {
+		if num > maxVal {
+			maxVal = num 
+		}
+	}
+	return maxVal 
+}
+
+
+// using variadic functions for flexible input types
+// interface{} type can hold any data type
+func printDetails(details ...interface{}) {
+	for _, detail := range details {
+		fmt.Println(detail)
+	}
+}
 
 
 func main() { 
@@ -114,6 +135,13 @@ func main() {
 	} else {
 		fmt.Println("Average", Avgresult) 
 	}
+
+	printDetails("Matthew", 50, true)
+
+
+	//calling amx function
+	fmt.Println(max(3, 50, 97, 0, 9, 85));
+
 
 }
 
